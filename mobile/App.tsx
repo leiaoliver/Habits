@@ -1,5 +1,4 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, StatusBar } from "react-native";
 import {
   useFonts,
   Inter_400Regular,
@@ -25,7 +24,11 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Hello word</Text>
-      <StatusBar style="auto" />
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
     </View>
   );
 }
@@ -38,7 +41,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   text: {
-    color: "red",
-    fontSize: 40,
+    color: "#fff",
+    fontFamily: "Inter_800ExtraBold",
   },
 });
