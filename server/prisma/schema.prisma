@@ -24,9 +24,10 @@ model HabitWeekDays {
   week_day Int
 
   @@unique([habit_id, week_day])
-  @@map("habit_week_day")
+  @@map("habit_week_day ")
 }
 
+//Só tem registro dos dias q completou pelo menos 1 habito
 model day {
   id String @id @default(uuid())
   date DateTime
