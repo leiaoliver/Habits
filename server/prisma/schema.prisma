@@ -27,7 +27,7 @@ model HabitWeekDays {
   @@map("habit_week_day ")
 }
 
-// Só tem registro dos dias q completou pelo menos 1 habito
+//Só tem registro dos dias q completou pelo menos 1 habito
 model day {
   id String @id @default(uuid())
   date DateTime
