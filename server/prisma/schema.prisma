@@ -26,7 +26,7 @@ model HabitWeekDays {
   habit_id String
   week_day Int
 
-  habit   Habit  @relation(fields: [habitId], references: [id])
+  habit   Habit  @relation(fields: [habit_id], references: [id])
   habitId String
 
   @@unique([habit_id, week_day])
