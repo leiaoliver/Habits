@@ -5,7 +5,7 @@ async function main() {
   await prisma.habit.create({
     data: {
       title: "Beber 2L de água",
-      cerate_at: new Date("2023-01-10T00:00:00:000z"),
+      created_at: new Date("2023-01-10T00:00:00:000z"),
     },
   });
 }
