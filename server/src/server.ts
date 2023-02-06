@@ -6,6 +6,7 @@ const app = Fastify();
 
 app.register(cors);
 app.register(appRoutes);
+
 /**
  * Metodo HTTP: Get(buscar informação), Post(criar algo), Put(atualizar recurso), Patch(atualizar recurso especifico),Delete(deletar)
  */
@@ -13,7 +14,8 @@ app.register(appRoutes);
 app
 	.listen({
 		port: 3333,
+		host: "0.0.0.0",
 	})
 	.then(() => {
-		console.log("HTTP Server running");
+		console.log("HTTP Server running!");
 	});
