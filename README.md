@@ -9,6 +9,8 @@
 
 ## NLW Setup - Habit
 
+<img src="./web/src/assets/cover.png"/>
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -21,7 +23,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 API em NodeJS para a criação e gerenciamento de Hábitos diarios.
-
 
 ## 🚀 Como Rodar
 
@@ -42,6 +43,7 @@ Frontend do projeto:
 - **`POST /habits`**: Rota de criação de hábitos
 
 Enviar:
+
 ```
 {
     "title": "Exemplo de hábito",
@@ -52,6 +54,7 @@ Enviar:
 - **`GET /day?date=2023-01-16T03:00:00.000z`**: Rota para retornar habitos por dia
 
 Retorna:
+
 ```
 {
     "possibleHabits": [
