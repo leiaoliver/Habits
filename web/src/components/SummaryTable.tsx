@@ -34,7 +34,7 @@ export function SummaryTable() {
           return (
             <div
               key={`${weekDay}-${i}`}
-              className="text-zinc-400 font-bold text-xl h-10 w-10 flex items-center justify-center"
+              className="text-zinc-400 text-xl h-10 w-10 font-boldflex items-center justify-center"
             >
               {weekDay}
             </div>
@@ -43,20 +43,21 @@ export function SummaryTable() {
       </div>
 
       <div className="grid grid-rows-7 grid-flow-col gap-3">
-        {summaryDates.map((date) => {
-          const dayInSummary = summary.find((day) => {
-            return dayjs(date).isSame(day.date, "day");
-          });
+        {summary.length > 0 &&
+          summaryDates.map((date) => {
+            const dayInSummary = summary.find((day) => {
+              return dayjs(date).isSame(day.date, "day");
+            });
 
-          return (
-            <HabitDay
-              key={date.toString()}
-              date={date}
-              amount={dayInSummary?.amount}
-              completed={dayInSummary?.completed}
-            />
-          );
-        })}
+            return (
+              <HabitDay
+                key={date.toString()}
+                date={date}
+                amount={dayInSummary?.amount}
+                defaultCompleted={dayInSummary?.completed}
+              />
+            );
+          })}
 
         {amountOfToFill > 0 &&
           Array.from({ length: amountOfToFill }).map((_, i) => {
